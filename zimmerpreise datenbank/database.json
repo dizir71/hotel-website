@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \{\
+  "rooms": [\
+    \{\
+      "season": "Nebensaison",\
+      "category": "J-Suite Lake",\
+      "nr": "201",\
+      "roomname": "Gr\'fcnberg",\
+      "occupancy": \{\
+        "1": 222,\
+        "2": 241,\
+        "3": 301\
+      \}\
+    \},\
+    \{\
+      "season": "Nebensaison",\
+      "category": "DZ Lake",\
+      "nr": "202",\
+      "roomname": "Schloss Orth",\
+      "occupancy": \{\
+        "1": 204,\
+        "2": 222\
+      \}\
+    \},\
+    \{\
+      "season": "Nebensaison",\
+      "category": "DZ Lake",\
+      "nr": "203",\
+      "roomname": "Sonnstein",\
+      "occupancy": \{\
+        "1": 204,\
+        "2": 222\
+      \}\
+    \},\
+    \{\
+      "season": "Nebensaison",\
+      "category": "Suite Lake",\
+      "nr": "301",\
+      "roomname": "Salettl",\
+      "occupancy": \{\
+        "1": 243,\
+        "2": 262,\
+        "3": 322,\
+        "4": 383\
+      \}\
+    \},\
+    \{\
+      "season": "Hauptsaison",\
+      "category": "J-Suite Lake",\
+      "nr": "201",\
+      "roomname": "Gr\'fcnberg",\
+      "occupancy": \{\
+        "1": 250,\
+        "2": 280,\
+        "3": 330\
+      \}\
+    \},\
+    \{\
+      "season": "Hauptsaison",\
+      "category": "DZ Lake",\
+      "nr": "202",\
+      "roomname": "Schloss Orth",\
+      "occupancy": \{\
+        "1": 230,\
+        "2": 260\
+      \}\
+    \},\
+    \{\
+      "season": "Hauptsaison",\
+      "category": "DZ Lake",\
+      "nr": "203",\
+      "roomname": "Sonnstein",\
+      "occupancy": \{\
+        "1": 230,\
+        "2": 260\
+      \}\
+    \},\
+    \{\
+      "season": "Hauptsaison",\
+      "category": "Suite Lake",\
+      "nr": "301",\
+      "roomname": "Salettl",\
+      "occupancy": \{\
+        "1": 270,\
+        "2": 290,\
+        "3": 350,\
+        "4": 420\
+      \}\
+    \}\
+  ]\
+\}}

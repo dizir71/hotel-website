@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1">&lt;html&gt;</span></p>
+<p class="p2"><span class="s1">&lt;head&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Interaktive Preisliste&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- jQuery (optional) --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1">&lt;body class="p-4"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Interaktive Preisliste&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Saisonauswahl --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;label for="season"&gt;Saison wählen:&lt;/label&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;select id="season"&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;option value=""&gt;Bitte wählen&lt;/option&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Kategorieauswahl --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;label for="category"&gt;Kategorie wählen:&lt;/label&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;select id="category" disabled&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;option value=""&gt;Bitte zuerst Saison wählen&lt;/option&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Zimmerauswahl --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;label for="room"&gt;Zimmer wählen:&lt;/label&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;select id="room" disabled&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;option value=""&gt;Bitte zuerst Kategorie wählen&lt;/option&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Personenanzahl --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;label for="persons"&gt;Personen:&lt;/label&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;select id="persons" disabled&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>&lt;option value=""&gt;Bitte zuerst Zimmer wählen&lt;/option&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Ausgabefeld --&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;p id="price"&gt;Preis: -&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>// Wir nutzen fetch, um die JSON-Daten zu laden:</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span>fetch('database.json')</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span>.then(response =&gt; response.json())</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span>.then(jsonData =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// jsonData = { rooms: [...] }</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>const data = jsonData.rooms;<span class="Apple-converted-space">  </span>// Array mit allen Zimmer-Objekten</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// 1) Saisonauswahl befüllen</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>const uniqueSeasons = [...new Set(data.map(item =&gt; item.season))];</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>uniqueSeasons.forEach(season =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('season')</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                  </span>.insertAdjacentHTML('beforeend', `&lt;option value="${season}"&gt;${season}&lt;/option&gt;`);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// Hilfsvariablen</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>let currentSeason = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>let currentCategory = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>let currentRoomData = null;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// 2) Saison-Auswahl-Event</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('season').addEventListener('change', function() {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentSeason = this.value;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>// Resets</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('category').innerHTML = '&lt;option value=\"\"&gt;Bitte wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('category').disabled = true;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('room').innerHTML = '&lt;option value=\"\"&gt;Bitte zuerst Kategorie wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('room').disabled = true;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').innerHTML = '&lt;option value=\"\"&gt;Bitte zuerst Zimmer wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').disabled = true;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('price').textContent = 'Preis: -';</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentCategory = '';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentRoomData = null;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>if (currentSeason) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// Kategorien filtern und befüllen</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const categoriesInSeason = data</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>.filter(item =&gt; item.season === currentSeason)</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>.map(item =&gt; item.category);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const uniqueCategories = [...new Set(categoriesInSeason)];</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>uniqueCategories.forEach(cat =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>document.getElementById('category')</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                      </span>.insertAdjacentHTML('beforeend', `&lt;option value=\"${cat}\"&gt;${cat}&lt;/option&gt;`);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('category').disabled = false;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// 3) Kategorie-Auswahl-Event</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('category').addEventListener('change', function() {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentCategory = this.value;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>// Resets</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('room').innerHTML = '&lt;option value=\"\"&gt;Bitte wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('room').disabled = true;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').innerHTML = '&lt;option value=\"\"&gt;Bitte zuerst Zimmer wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').disabled = true;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('price').textContent = 'Preis: -';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentRoomData = null;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>if (currentCategory) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// Zimmer filtern</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const roomsInCategory = data.filter(item =&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>item.season === currentSeason &amp;&amp; item.category === currentCategory</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>roomsInCategory.forEach(r =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>document.getElementById('room')</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                      </span>.insertAdjacentHTML('beforeend', `&lt;option value=\"${r.nr}\"&gt;${r.nr} – ${r.roomname}&lt;/option&gt;`);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('room').disabled = false;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// 4) Zimmer-Auswahl-Event</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('room').addEventListener('change', function() {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>const chosenNr = this.value;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').innerHTML = '&lt;option value=\"\"&gt;Bitte wählen&lt;/option&gt;';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('persons').disabled = true;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>document.getElementById('price').textContent = 'Preis: -';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>currentRoomData = null;</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>if (chosenNr) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>// Entsprechendes Objekt finden</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>currentRoomData = data.find(d =&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>d.season === currentSeason &amp;&amp; d.category === currentCategory &amp;&amp; d.nr === chosenNr</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>if (currentRoomData) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>// Keys für belegbare Personenzahl</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>const personsOptions = Object.keys(currentRoomData.occupancy)</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>.map(Number)</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>.sort((a,b) =&gt; a - b);</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>personsOptions.forEach(p =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById('persons')</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span>.insertAdjacentHTML('beforeend', `&lt;option value=\"${p}\"&gt;${p} Person(en)&lt;/option&gt;`);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">              </span>document.getElementById('persons').disabled = false;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>// 5) Personen-Auswahl-Event</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById('persons').addEventListener('change', function() {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>const chosenPersons = this.value;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>if (currentRoomData &amp;&amp; chosenPersons) {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>const price = currentRoomData.occupancy[chosenPersons];</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('price').textContent = `Preis: ${price} €`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>} else {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('price').textContent = 'Preis: -';</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">          </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span>})</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span>.catch(error =&gt; {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span>console.error('Fehler beim Laden der JSON-Daten:', error);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>

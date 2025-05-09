@@ -1,0 +1,210 @@
+{
+    "typography": {
+        "name": "custom-page-typography-9",
+        "title": {
+            "font-weight": "400",
+            "font-size": 4.5,
+            "line-height": "1_1",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "SM": {
+                "font-size": 3.75
+            },
+            "XS": {
+                "font-size": 3
+            },
+            "text-color": "palette-1-dark-2"
+        },
+        "subtitle": {
+            "font-weight": "400",
+            "font-size": 2.25,
+            "line-height": "1_1",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "XS": {
+                "font-size": 1.5
+            },
+            "text-color": "palette-1-dark-2"
+        },
+        "h1": {
+            "font-weight": "400",
+            "font-size": 3,
+            "line-height": "1_1",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "XS": {
+                "font-size": 2.25
+            },
+            "text-color": "palette-1-dark-2"
+        },
+        "h2": {
+            "font-weight": "400",
+            "font-size": 2.5714285714285716,
+            "line-height": "1_1",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "XS": {
+                "font-size": 1.5
+            },
+            "text-color": "palette-1-dark-2"
+        },
+        "h3": {
+            "font-weight": "400",
+            "font-size": 2.2857142857142856,
+            "line-height": "1_2",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "XS": {
+                "font-size": 1.5
+            },
+            "text-color": "palette-1-dark-2"
+        },
+        "h4": {
+            "font-weight": "400",
+            "font-size": 1.8571428571428572,
+            "line-height": "1_2",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2"
+        },
+        "h5": {
+            "font-weight": "400",
+            "font-size": 1.5714285714285714,
+            "line-height": "1_2",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-3"
+        },
+        "h6": {
+            "font-weight": "400",
+            "font-size": 1.125,
+            "line-height": "1_2",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2"
+        },
+        "largeText": {
+            "font-size": 1.25,
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-3"
+        },
+        "smallText": {
+            "font-size": 0.875,
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2"
+        },
+        "text": {
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2",
+            "font-weight": "400",
+            "font-size": 1.1428571428571428
+        },
+        "hyperlink": {
+            "text-color": "palette-1-base"
+        },
+        "link": {},
+        "button": {
+            "color": "palette-1-dark-1",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "hover-color": "palette-1-light-1",
+            "active-color": "palette-1-light-1"
+        },
+        "blockquote": {
+            "font-style": "italic",
+            "indent": 20,
+            "border": 4,
+            "border-color": "palette-1-base",
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-1"
+        },
+        "metadata": {
+            "margin-top": 20,
+            "margin-bottom": 20
+        },
+        "list": {
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2"
+        },
+        "orderedlist": {
+            "margin-top": 20,
+            "margin-bottom": 20,
+            "text-color": "palette-1-dark-2"
+        },
+        "postContent": {
+            "margin-top": 20,
+            "margin-bottom": 20
+        },
+        "theme": {
+            "gradient": "",
+            "image": "",
+            "background-image": "linear-gradient(var(--palette-1-base), var(--palette-1-light-3))",
+            "background-size": "cover",
+            "background-position": "50% 50%",
+            "background-repeat": "no-repeat",
+            "background-attachment": "fixed",
+            "sheet-width-xl": 1140,
+            "sheet-width-lg": 940,
+            "sheet-width-md": 720,
+            "sheet-width-sm": 540,
+            "sheet-width-xs": 340,
+            "sheet-width-xxl": 1320
+        },
+        "htmlBaseSize": 14,
+        "form-input": {
+            "border": 1,
+            "border-color": "grey-30",
+            "borders": "top right bottom left",
+            "color": "white",
+            "text-color": "black"
+        }
+    },
+    "fontScheme": {
+        "name": "custom-font-family-24",
+        "default": true,
+        "fonts": {
+            "heading": "ABeeZee",
+            "text": "Besley",
+            "accent": "Arial, sans-serif",
+            "headingTitle": "ABeeZee",
+            "textTitle": "Besley"
+        }
+    },
+    "colorScheme": {
+        "bodyColors": [
+            "#111111",
+            "#ffffff"
+        ],
+        "bgColor": "#ffffff",
+        "colors": [
+            "#73a3de",
+            "#4c637f",
+            "#8bc9ba",
+            "#92e4fd",
+            "#b8c1cc"
+        ],
+        "customColors": [
+            {
+                "color": "#82b6e7",
+                "status": 0,
+                "transparency": 0.69,
+                "index": 0
+            },
+            {
+                "color": "#82b6e7",
+                "status": 0,
+                "transparency": 0.46,
+                "index": 1
+            }
+        ],
+        "shadingContrast": "body-alt-color",
+        "whiteContrast": "body-color",
+        "bgContrast": "body-color",
+        "name": "u10"
+    }
+}
